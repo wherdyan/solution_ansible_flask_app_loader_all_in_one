@@ -16,10 +16,10 @@
       add_host:
         name: "{{ item.public_v4 }}"
         ansible_user: cloud-user
-        ansible_ssh_private_key_file: "~/.ssh/test_id_rsa"
+        ansible_ssh_private_key_file: "~/.ssh/openstack.pem"
         group:
           - "{{ item.metadata.group }}"
-          - "{{ item.metadata.deployment_name }}"
+          - "{{ item.metadata. deployment_name }}"
       loop: "{{ r_os_servers.openstack_servers }}"
 
 
